@@ -1,0 +1,10 @@
+version: '3.8'
+ 
+services:
+  mongodb:
+    image: mongo:5.0
+    volumes:
+      - ./mongo/data:/data/db
+    ports:
+      - 8007:27017
+    container_name: mymongo
