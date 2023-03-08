@@ -1,10 +1,14 @@
-version: '3.8'
- 
+version: '3.7'
 services:
-  mongodb:
-    image: mongo:5.0
-    volumes:
-      - ./mongo/data:/data/db
+  mongodb_container:
+    image: mongo:4.4
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 
+      MONGO_INITDB_ROOT_PASSWORD: 
     ports:
       - 8007:27017
-    container_name: mymongo
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  mongodb_data_container:
