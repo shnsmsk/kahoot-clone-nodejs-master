@@ -22,7 +22,7 @@ socket.on('hostDisconnect', function(){
 
 //When the host clicks start game, the player screen changes
 socket.on('gameStartedPlayer', function(){
-    window.location.href="/player/game/" + "?id=" + socket.id;
+    window.location.href="/player/game/" + "?id=" + socket.id;   
 });
 
 

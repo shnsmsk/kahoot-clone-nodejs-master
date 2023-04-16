@@ -26,6 +26,10 @@ button{
     font-family: 'Raleway', sans-serif;
     padding: 0px 10px;
 }
+#rankText{
+    font-family: 'Raleway', sans-serif;
+    padding: 0px 10px;
+}
 #message{
     font-family: 'Raleway', sans-serif;
     text-align: center;

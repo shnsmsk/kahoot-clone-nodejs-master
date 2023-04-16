@@ -6,6 +6,11 @@ var score = 0;
 
 var params = jQuery.deparam(window.location.search); //Gets the id from url
 
+// socket.on('message', (data) => {
+//     const messageElement = document.getElementById('message1');
+//     messageElement.innerHTML = data.message;
+//   });
+
 socket.on('connect', function() {
     //Tell server that it is host connection from game view
     socket.emit('player-join-game', params);
@@ -101,3 +106,25 @@ socket.on('GameOver', function(){
     document.getElementById('message').innerHTML = "GAME OVER";
 });
 
+
+
+socket.on('answer', function(data){
+    socket.on('message', (data) => {
+        //const messageElement = document.getElementById('message1');
+    //messageElement.innerHTML = data.message;
+    
+    if (data.message === "answer1") {
+        document.getElementById('answer1').click();
+    }
+    else if (data.message === "answer2"){
+        document.getElementById('answer2').click();
+    }
+    else if (data.message === "answer3"){
+        document.getElementById('answer3').click();
+    }
+    else if (data.message === "answer4"){
+        document.getElementById('answer4').click();
+    }
+      });
+ //console.log(data);
+});
