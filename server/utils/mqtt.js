@@ -57,7 +57,7 @@ function subscribe(io,data) {
     const sockets = io.sockets;
     const connectedSockets = Object.keys(sockets.sockets);
     console.log('Connected sockets:', connectedSockets);
-    //io.to(connectedSockets[1]).emit('answer',answer2);
+    io.to(connectedSockets[1]).emit('answer',answer2);
     io.to(connectedSockets[1]).emit('message', { message: answer2 });
     // if(answer2.startsWith("answer")){
     //   io.to(connectedSockets[1]).emit('message', { message: answer2 });
