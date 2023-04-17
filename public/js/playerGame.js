@@ -110,21 +110,20 @@ socket.on('GameOver', function(){
 
 socket.on('answer', function(data){
     socket.on('message', (data) => {
-        //const messageElement = document.getElementById('message1');
-    //messageElement.innerHTML = data.message;
+    //     const messageElement = document.getElementById('message1');
+    // messageElement.innerHTML = data.message;
     
-    if (data.message === "answer1") {
-        document.getElementById('answer1').click();
-    }
-    else if (data.message === "answer2"){
-        document.getElementById('answer2').click();
-    }
-    else if (data.message === "answer3"){
-        document.getElementById('answer3').click();
-    }
-    else if (data.message === "answer4"){
-        document.getElementById('answer4').click();
-    }
+        if (data.message === "answer1") {
+            document.getElementById('answer1').click();
+        }
+        else if (data.message === "answer2"){
+            document.getElementById('answer2').click();
+        }
+        else if (data.message === "answer3"){
+            document.getElementById('answer3').click();
+        }
+        else if (data.message === "answer4"){
+            document.getElementById('answer4').click();
+        }
       });
- //console.log(data);
 });
